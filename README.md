@@ -25,3 +25,18 @@ pnpm install ts-node --save-dev
 pnpm install jest-environment-jsdom --save-dev
 
 pnpm install @types/node --save-dev
+
+## React Testing Library
+· @testing-library/jest-dom：用于 dom、样式类型等元素的选取。
+· @testing-library/react：提供针对 React 的单测渲染能力。
+· @testing-library/user-event：用于单测场景下事件的模拟。
+
+pnpm install @testing-library/jest-dom @testing-library/react @testing-library/user-event --save-dev
+
+pnpm i --save-dev @types/testing-library__jest-dom
+
+pnpm i --save-dev @testing-library/dom
+
+pnpm i -D jest-svg-transformer
+
+pnpm install --save-dev identity-obj-proxy
