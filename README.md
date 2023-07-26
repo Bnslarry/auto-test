@@ -40,3 +40,9 @@ pnpm i --save-dev @testing-library/dom
 pnpm i -D jest-svg-transformer
 
 pnpm install --save-dev identity-obj-proxy
+
+## prettier
+pnpm i prettier -D
+
+## semi UI
+pnpm i @douyinfe/semi-ui
