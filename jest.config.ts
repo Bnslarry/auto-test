@@ -9,4 +9,5 @@ export default {
     "^.+\\.svg$": "jest-svg-transformer",
   },
   setupFilesAfterEnv: ["<rootDir>/src/setupTests.ts"],
+  transformIgnorePatterns: ["node_modules/(?!axios)"],
 };

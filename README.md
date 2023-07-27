@@ -52,3 +52,8 @@ pnpm i prettier -D
 
 ## semi UI
 pnpm i @douyinfe/semi-ui
+
+## axios
+pnpm install axios
+
+pnpm install jest-mock
