@@ -22,3 +22,6 @@
 · toHaveAttribute: 匹配元素是否具备某个值的属性；
 · toHaveClass: 匹配元素在类属性中是否包含某个类；
 · toHaveStyle: 匹配元素是否具有对应样式，需要注意的是，这个是精准非模糊匹配，例如 display: none 无法匹配 display:none;color:#fff;。
+
+## tips
+对于 waitForElementToBeRemoved 需要判断的 DOM 元素，应该使用 queryBy 来查询, queryBy 和getBy 的区别在于 getBy 在未查询到指定元素时，会抛出错误
