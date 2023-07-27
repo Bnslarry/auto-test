@@ -20,4 +20,38 @@ describe(" DOM断言:页面元素的断言", () => {
         expect(hiddenNote).toHaveClass("hidden");
         expect(hiddenNote).toHaveStyle("display: none");
       });
+    test('异步自定义匹配器', async () => {
+      const toBeBetweenZeroAndTen = async (num: number) => {
+        const res = await new Promise<{
+          message: () => string;
+          pass: boolean;
+        }>((resolve) => {
+          setTimeout(() => {
+            if (num >= 0 && num <= 10) {
+              resolve({
+                message: () => '',
+                pass: true
+              });
+            } else {
+              resolve({
+                message: () =>
+                  'expected num to be a number between zero and ten',
+                pass: false
+              });
+            }
+          }, 1000);
+        });
+        return (
+          res || {
+            message: () => 'expected num to be a number between zero and ten',
+            pass: false
+          }
+        );
+      };
+      expect.extend({
+        toBeBetweenZeroAndTen
+      });
+      await expect(8).toBeBetweenZeroAndTen();
+      await expect(11).not.toBeBetweenZeroAndTen();
+    });
   });
