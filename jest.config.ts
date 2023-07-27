@@ -8,5 +8,5 @@ export default {
     "\\.(css|less)$": "identity-obj-proxy",
     "^.+\\.svg$": "jest-svg-transformer",
   },
-  setupFilesAfterEnv: ["<rootDir>/jest-dom-setup.js"],
+  setupFilesAfterEnv: ["<rootDir>/src/setupTests.ts"],
 };
