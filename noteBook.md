@@ -25,3 +25,5 @@
 
 ## tips
 对于 waitForElementToBeRemoved 需要判断的 DOM 元素，应该使用 queryBy 来查询, queryBy 和getBy 的区别在于 getBy 在未查询到指定元素时，会抛出错误
+
+快照测试适合使用在不轻易改变，不改变的公共逻辑中
